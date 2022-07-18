@@ -25,7 +25,17 @@ max_data = data['Pace'].max()
 print(min_data)
 print(max_data)
 
-# found average pace of each decade
-seventys_average = data['Pace'].mean('48','47','46','45','44','43')
+#found correlation between Pace and PTS
 
-print(seventys_average)
+print(data['Pace'].corr(data['PTS']))
+
+#found correlation between Pace and 3P
+
+print(data['Pace'].corr(data['3P']))
+
+#found correlation between Pace and FG
+
+print(data['Pace'].corr(data['FG']))
+
+#found statistical summary of data 
+print(data.describe())
