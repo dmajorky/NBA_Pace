@@ -1,6 +1,8 @@
 import numpy as np
 import pandas as pd
 from pandas import ExcelFile
+import matplotlib as mpl
+import matplotlib.pyplot as plt
 
 # imported csv file using read_csv function 
 data = pd.read_csv('NBA_stats.csv')
@@ -39,3 +41,5 @@ print(data['Pace'].corr(data['FG']))
 
 #found statistical summary of data 
 print(data.describe())
+
+plt.plot()
