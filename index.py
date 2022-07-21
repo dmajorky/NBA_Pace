@@ -4,11 +4,11 @@ from pandas import ExcelFile
 import matplotlib as mpl
 import matplotlib.pyplot as plt
 
-# imported csv file using read_csv function 
+#imported csv file using read_csv function
 data = pd.read_csv('NBA_stats.csv')
 
 # dropped rows where Pace was not recorded
-data.drop([75,74,73,72,71,70,69,68,67,66,65,64,63,62,61,60,59,58,57,56,55,54,53,52,51,50,49],axis=0,inplace=True)
+data.drop([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26],axis=0,inplace=True)
 
 # dropped columns that were irrelevant
 data.drop(['Rk','Lg','Age','Ht','Wt','G','MP','eFG%','TOV%','ORB%','FT/FGA','ORtg'],axis=1,inplace=True)
@@ -42,4 +42,9 @@ print(data['Pace'].corr(data['FG']))
 #found statistical summary of data 
 print(data.describe())
 
-plt.plot()
+# line graph of Pace throughout NBA history
+data['Pace'].plot()
+plt.title("NBA Pace Throughout History")
+plt.xlabel("Season")
+plt.ylabel("Pace")
+plt.show()
