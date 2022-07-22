@@ -8,7 +8,7 @@ import matplotlib.pyplot as plt
 data = pd.read_csv('NBA_stats.csv')
 
 # dropped rows where Pace was not recorded
-data.drop([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26],axis=0,inplace=True)
+data.drop(range(27),axis=0,inplace=True)
 
 # dropped columns that were irrelevant
 data.drop(['Rk','Lg','Age','Ht','Wt','G','MP','eFG%','TOV%','ORB%','FT/FGA','ORtg'],axis=1,inplace=True)
@@ -43,8 +43,30 @@ print(data['Pace'].corr(data['FG']))
 print(data.describe())
 
 # line graph of Pace throughout NBA history
-data['Pace'].plot()
+plt.plot(data['Season'],data['Pace'])
 plt.title("NBA Pace Throughout History")
 plt.xlabel("Season")
 plt.ylabel("Pace")
+plt.xticks(rotation = 90)
+plt.show()
+
+#scatter plot showing strong correlation between pace and points per game
+plt.scatter(data['Pace'], data['PTS'])
+plt.xlabel('Pace')
+plt.ylabel('Points Per Game')
+plt.title('Pace vs Points per Game')
+plt.show()
+
+#scatter plot showing little correlatio between pace and 3 pointers made per game
+plt.scatter(data['Pace'], data['3P'])
+plt.xlabel('Pace')
+plt.ylabel('3 Pointers Made Per Game')
+plt.title('Pace vs 3 Pointers Made Per Game')
+plt.show()
+
+#scatter plot showing strong correlation between pace and shots made per game
+plt.scatter(data['Pace'], data['FG'])
+plt.xlabel('Pace')
+plt.ylabel('Shots Made Per Game')
+plt.title('Pace vs Shots Made per Game')
 plt.show()
