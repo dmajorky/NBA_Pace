@@ -3,24 +3,24 @@ import pandas as pd
 from pandas import ExcelFile
 import matplotlib as mpl
 import matplotlib.pyplot as plt
+from tabulate import tabulate
 
 #imported csv file using read_csv function
 data = pd.read_csv('NBA_stats.csv')
 
-# dropped rows where Pace was not recorded
+#dropped rows where Pace was not recorded
 data.drop(range(27),axis=0,inplace=True)
 
-# dropped columns that were irrelevant
+#dropped columns that were irrelevant
 data.drop(['Rk','Lg','Age','Ht','Wt','G','MP','eFG%','TOV%','ORB%','FT/FGA','ORtg'],axis=1,inplace=True)
-
 print(data)
 
-# found the average pace in NBA history
+#found the average pace in NBA history
 mean_data = data['Pace'].mean()
 
 print(mean_data)
 
-# found lowest pace(min) & highest pace(max) in NBA history
+#found lowest(min) pace & highest(max) pace in NBA history
 min_data = data['Pace'].min()
 max_data = data['Pace'].max()
 
@@ -40,9 +40,10 @@ print(data['Pace'].corr(data['3P']))
 print(data['Pace'].corr(data['FG']))
 
 #found statistical summary of data 
+
 print(data.describe())
 
-# line graph of Pace throughout NBA history
+#line graph of Pace throughout NBA history
 plt.plot(data['Season'],data['Pace'])
 plt.title("NBA Pace Throughout History")
 plt.xlabel("Season")
@@ -57,7 +58,7 @@ plt.ylabel('Points Per Game')
 plt.title('Pace vs Points per Game')
 plt.show()
 
-#scatter plot showing little correlatio between pace and 3 pointers made per game
+#scatter plot showing little correlation between pace and 3 pointers made per game
 plt.scatter(data['Pace'], data['3P'])
 plt.xlabel('Pace')
 plt.ylabel('3 Pointers Made Per Game')
@@ -70,3 +71,7 @@ plt.xlabel('Pace')
 plt.ylabel('Shots Made Per Game')
 plt.title('Pace vs Shots Made per Game')
 plt.show()
+
+#imported NBA champs pace & season rank using read.csv function
+champs_data = pd.read_csv('NBA Champs pace.csv')
+print(champs_data)
