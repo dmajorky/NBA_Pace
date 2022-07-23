@@ -3,7 +3,6 @@ import pandas as pd
 from pandas import ExcelFile
 import matplotlib as mpl
 import matplotlib.pyplot as plt
-from tabulate import tabulate
 
 #imported csv file using read_csv function
 data = pd.read_csv('NBA_stats.csv')
