@@ -13,18 +13,34 @@ throughout NBA history on points per game, shots made, and 3 pointers made, as w
 
 # What needs to be installed
 
-pip install numpy, pip install pandas, pip install matplotlib
+pip install numpy 
 
-import numpy as np,
-import pandas as pd,
-from pandas import ExcelFile,
-import matplotlib as mpl,
-import matplotlib.pyplot as plt,
+pip install pandas 
+
+pip install matplotlib
+
+import numpy as np
+
+import pandas as pd
+
+from pandas import ExcelFile
+
+import matplotlib as mpl
+
+import matplotlib.pyplot as plt
 
 # Features included
 
-Read in two csv files using the read_csv function,
-Used pandas drop() function to drop rows where pace was not recorded and to drop columns that were irrelevent, 
-Used 5 different pandas functions to do basic calculations by 1. using the mean() function to find the average overall pace in NBA history, 2. the min() and 3. max() 
-functions to find the lowest and highest recorded pace, 4. using the corr() function to find the correlation between Pace & points per game (PTS), 3 pointers made(3P), 
-and shots made(FG) per game, 5. and using the describe() function to find the statistical summary of the data, and used matplotlib to plot a line graph showing pace throughout NBA history as well as 3 scatter plots that shows the correlation between Pace, Points per game, Shots made per game, and 3 pointers made per game.  
+Read in two csv files using the read_csv function
+
+Used pandas drop() function to drop rows where pace was not recorded and to drop columns that were irrelevent 
+
+Used 5 different pandas functions to do basic calculations by 
+1. using the mean() function to find the average overall pace in NBA history
+2. the min() to find the lowest recorded pace
+3. the max() function to find the highest recorded pace
+4. the corr() function to find the correlation between Pace & points per game (PTS), 3 pointers made(3P), 
+and shots made(FG) per game
+5. the describe() function to find the statistical summary of the data
+
+Matplotlib to plot a line graph showing pace throughout NBA history as well as 3 scatter plots that shows the correlation between Pace, Points per game, Shots made per game, and 3 pointers made per game.  
