@@ -44,3 +44,5 @@ and shots made(FG) per game
 5. the describe() function to find the statistical summary of the data
 
 Matplotlib to plot a line graph showing pace throughout NBA history as well as 3 scatter plots that shows the correlation between Pace, Points per game, Shots made per game, and 3 pointers made per game.  
+
+# What I found
