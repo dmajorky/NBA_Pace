@@ -51,21 +51,21 @@ plt.xticks(rotation = 90)
 plt.show()
 
 #scatter plot showing strong correlation between pace and points per game
-plt.scatter(data['Pace'], data['PTS'])
+plt.scatter(data['Pace'], data['PTS'], c = "orange")
 plt.xlabel('Pace (Possessions Per Game)')
 plt.ylabel('Points Per Game')
 plt.title('Pace vs Points per Game')
 plt.show()
 
 #scatter plot showing little correlation between pace and 3 pointers made per game
-plt.scatter(data['Pace'], data['3P'])
+plt.scatter(data['Pace'], data['3P'], c = "orange")
 plt.xlabel('Pace (Possessions Per Game)')
 plt.ylabel('3 Pointers Made Per Game')
 plt.title('Pace vs 3 Pointers Made Per Game')
 plt.show()
 
 #scatter plot showing strong correlation between pace and shots made per game
-plt.scatter(data['Pace'], data['FG'])
+plt.scatter(data['Pace'], data['FG'], c = 'orange')
 plt.xlabel('Pace (Possessions Per Game)')
 plt.ylabel('Shots Made Per Game')
 plt.title('Pace vs Shots Made per Game')
