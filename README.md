@@ -19,16 +19,6 @@ pip install pandas
 
 pip install matplotlib
 
-import numpy as np
-
-import pandas as pd
-
-from pandas import ExcelFile
-
-import matplotlib as mpl
-
-import matplotlib.pyplot as plt
-
 # Features included
 
 Read in two csv files using the read_csv function
